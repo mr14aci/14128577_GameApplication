@@ -9,11 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var restart: UIButton!
     
     @IBOutlet weak var scoreGenerator: UILabel!
     
-    var point = 0
     
+    
+    @IBOutlet weak var timer: UIButton!
+    
+    
+    
+    var point = 0
+    var start = 20
+    var startTimer = Timer()
     
     var gameAnimator: UIDynamicAnimator!
     var dynamicObjectBehaviour : UIDynamicItemBehavior!
@@ -36,11 +44,24 @@ class ViewController: UIViewController {
     
     let carsArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     
+    @objc func startGameTimer(){
+        start = start - 1
+        timer.setTitle(String(start), for:.normal)
+        
+        if start == 0 {
+            startTimer.invalidate()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        startTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector (ViewController.startGameTimer), userInfo: nil, repeats: true)
+        start = 20
+        timer.setTitle(String(start), for:.normal)
         
+        restart.isHidden = true
         
         gameAnimator = UIDynamicAnimator(referenceView: self.view)
         dynamicObjectBehaviour = UIDynamicItemBehavior(items:[])
@@ -91,6 +112,18 @@ class ViewController: UIViewController {
         collisionBehaviour = UICollisionBehavior(items:[])
         collisionBehaviour.translatesReferenceBoundsIntoBoundary = false
         gameAnimator.addBehavior(collisionBehaviour)
+        
+        let finishView = UIImageView(image: nil)
+        finishView.image = UIImage(named: "gameover.png")
+        finishView.frame = UIScreen.main.bounds
+        
+        let currentwhen = DispatchTime.now() + 20
+        DispatchQueue.main.asyncAfter(deadline: currentwhen){
+            self.view.addSubview(finishView)
+            self.view.addSubview(self.restart)
+            
+            self.restart.isHidden = false
+        }
         
         var pictureArray: [UIImage]!
         

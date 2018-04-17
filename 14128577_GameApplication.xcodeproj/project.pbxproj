@@ -41,6 +41,7 @@
 		3F501DEC208538E6006B9BE8 /* car1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F501DD1208538E6006B9BE8 /* car1.png */; };
 		3F501DED208538E6006B9BE8 /* road16.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F501DD2208538E6006B9BE8 /* road16.png */; };
 		3F501DEE208538E6006B9BE8 /* car5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F501DD3208538E6006B9BE8 /* car5.png */; };
+		3FFAE5062086433700A7AD77 /* gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFAE5052086433700A7AD77 /* gameover.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		3F501DD1208538E6006B9BE8 /* car1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car1.png; path = "../../../../Desktop/images-2/car1.png"; sourceTree = "<group>"; };
 		3F501DD2208538E6006B9BE8 /* road16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road16.png; path = "../../../../Desktop/images-2/road16.png"; sourceTree = "<group>"; };
 		3F501DD3208538E6006B9BE8 /* car5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car5.png; path = "../../../../Desktop/images-2/car5.png"; sourceTree = "<group>"; };
+		3FFAE5052086433700A7AD77 /* gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gameover.png; path = ../../../../Desktop/gameover.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				3F501DBE208538E3006B9BE8 /* road18.png */,
 				3F501DCE208538E5006B9BE8 /* road19.png */,
 				3F501DC5208538E4006B9BE8 /* road20.png */,
+				3FFAE5052086433700A7AD77 /* gameover.png */,
 				3F501D9220853877006B9BE8 /* Assets.xcassets */,
 				3F501D9420853877006B9BE8 /* LaunchScreen.storyboard */,
 				3F501D9720853877006B9BE8 /* Info.plist */,
@@ -313,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFAE5062086433700A7AD77 /* gameover.png in Resources */,
 				3F501DDC208538E6006B9BE8 /* road6.png in Resources */,
 				3F501DE6208538E6006B9BE8 /* road17.png in Resources */,
 				3F501DD4208538E6006B9BE8 /* car3.png in Resources */,
