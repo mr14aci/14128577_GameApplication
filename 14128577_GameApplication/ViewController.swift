@@ -54,9 +54,9 @@ class ViewController: UIViewController {
                 
                 switch barrier{
                     
-                case 1: barrierView.image = UIImage(named: "car2.png")
-                case 2: barrierView.image = UIImage(named: "car3.png")
-                case 3: barrierView.image = UIImage(named: "car1.png")
+                case 1: barrierView.image = UIImage(named: "car1.png")
+                case 2: barrierView.image = UIImage(named: "car2.png")
+                case 3: barrierView.image = UIImage(named: "car3.png")
                 case 4: barrierView.image = UIImage(named: "car4.png")
                 case 5: barrierView.image = UIImage(named: "car5.png")
                 case 6: barrierView.image = UIImage(named: "car6.png")
