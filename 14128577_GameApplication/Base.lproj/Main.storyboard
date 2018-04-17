@@ -29,6 +29,13 @@
                                     <outletCollection property="gestureRecognizers" destination="IUv-Zl-aCt" appends="YES" id="gjC-L3-8gv"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XE7-D6-12o">
+                                <rect key="frame" x="90" y="53" width="92" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="0.35509271288316202" green="1" blue="0.2833131403169713" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -42,6 +49,7 @@
                     <connections>
                         <outlet property="playerCar" destination="5aR-Zz-oUP" id="UOJ-oM-8fS"/>
                         <outlet property="roadimage" destination="snu-6W-bKc" id="tTl-09-rqX"/>
+                        <outlet property="scoreGenerator" destination="XE7-D6-12o" id="ebL-Sj-j75"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -51,6 +59,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="76" y="33.733133433283363"/>
         </scene>
     </scenes>
     <resources>

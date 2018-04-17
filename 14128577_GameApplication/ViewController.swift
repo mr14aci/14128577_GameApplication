@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var scoreGenerator: UILabel!
+    
+    var point = 0
+    
+    
     var gameAnimator: UIDynamicAnimator!
     var dynamicObjectBehaviour : UIDynamicItemBehavior!
     var gravityBehaviour: UIGravityBehavior!
@@ -35,6 +40,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
         gameAnimator = UIDynamicAnimator(referenceView: self.view)
         dynamicObjectBehaviour = UIDynamicItemBehavior(items:[])
         collisionBehaviour = UICollisionBehavior(items:[])
@@ -49,7 +56,7 @@ class ViewController: UIViewController {
                 
                 let barrier = arc4random_uniform(10)
                 let barrierView = UIImageView (image: nil)
-                let displayWidth = UIScreen.main.bounds.width
+                //let displayWidth = UIScreen.main.bounds.width
                 
                 
                 switch barrier{
@@ -65,7 +72,8 @@ class ViewController: UIViewController {
                     barrierView.image = UIImage(named: "car1.png")
                     
                 }
-                barrierView.frame = CGRect(x: Int(arc4random_uniform(UInt32(displayWidth))), y: 0, width: 40, height:80 )
+                let RandomXVar = Int(arc4random_uniform(250) + 50)
+                barrierView.frame = CGRect(x: RandomXVar, y: 0, width: 30, height:50 )
                 
                 self.view.addSubview(barrierView)
                 self.view.bringSubview(toFront: barrierView)
@@ -74,6 +82,8 @@ class ViewController: UIViewController {
                 self.dynamicObjectBehaviour.addItem(barrierView)
                 self.dynamicObjectBehaviour.addLinearVelocity(CGPoint(x: 0, y: 250), for: barrierView)
                 self.collisionBehaviour.addItem(barrierView)
+                self.scoreGenerator.text = String(self.point)
+                self.point = self.point + 1
             }
         }
         
